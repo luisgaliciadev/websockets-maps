@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Lugar } from '../interfaces/lugar';
 import { HttpClient } from '@angular/common/http';
-import { WebsocketService } from '../../../../../sockets-graficas/graficas/src/app/services/websocket.service';
-
+import { WebsocketService } from '../services/websocket.service';
 
 @Component({
   selector: 'app-mapa',
@@ -22,7 +21,7 @@ export class MapaComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this._http.get('http://localhost:5000/mapa').subscribe(
+    this._http.get('https://server-sockets-maps.herokuapp.com/mapa').subscribe(
       (lugares: Lugar[]) => {
         this.lugares = lugares;
         this.cargarMapa();  

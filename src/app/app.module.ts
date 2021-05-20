@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule} from '@angular/common/http';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
-const config: SocketIoConfig = { url: 'http://localhost:5000', options: {} };
+const config: SocketIoConfig = { url: 'https://server-sockets-maps.herokuapp.com', options: {} };
 
 import { AppComponent } from './app.component';
 import { MapaComponent } from './mapa/mapa.component';
